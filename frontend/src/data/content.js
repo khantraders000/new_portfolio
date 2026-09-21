@@ -3,7 +3,7 @@ export const CONTACT = {
   phone: "+917905487052",
   email: "ayan180000@gmail.com",
   github: "https://github.com/khantraders000",
-  linkedin: "https://www.linkedin.com/in/ayankhan-dev",
+  linkedin: "https://www.linkedin.com/in/ayan-khan-b06057354",
   location: "Uttar Pradesh, India",
 };
 

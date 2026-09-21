@@ -33,12 +33,9 @@ const SITE_URL = "https://itsayan.in";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {
-    default: "Ayan Khan | itsayan — Full-Stack Developer & MERN Stack Developer",
-    template: "%s | Ayan Khan (itsayan)",
-  },
+  title: "Ayan Khan | Full-Stack Developer",
   description:
-    "Ayan Khan (itsayan) — Full-Stack Developer specialising in the MERN stack, AI and real-time web applications. Explore projects, skills and get in touch.",
+    "Ayan Khan is a Full-Stack Developer specializing in React, Next.js, Node.js, MongoDB and AI-powered web applications.",
   keywords: [
     "itsayan",
     "Ayan Khan",
@@ -69,6 +66,7 @@ export const metadata = {
     "best iot engineer in raebareli",
   ],
   authors: [{ name: "Ayan Khan", url: SITE_URL }],
+  metadataBase: new URL("https://itsayan.in"),
   creator: "Ayan Khan",
   publisher: "Ayan Khan",
   alternates: {
@@ -100,7 +98,7 @@ export const metadata = {
     google: "YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
     apple: "/apple-touch-icon.png",
   },
 };
@@ -128,7 +126,7 @@ export default function RootLayout({ children }) {
               sameAs: [
                 "https://github.com/khantraders000",
                 "https://www.linkedin.com/in/ayan-khan-b06057354",
-                "https://www.instagram.com/ayan_khan_0313_",
+                "https://www.instagram.com/ayan_khan_0313._",
               ],
             }),
           }}
