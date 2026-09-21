@@ -8,8 +8,6 @@ export default function About() {
 
   return (
     <section id="about" className="max-w-6xl mx-auto px-5 md:px-10 py-24 md:py-32">
-      <Reveal>
-      </Reveal>
       <Reveal delay={0.05}>
         <h2 className="font-display text-3xl md:text-5xl font-semibold mt-3">About me</h2>
       </Reveal>
