@@ -29,10 +29,80 @@ const urdu = Noto_Nastaliq_Urdu({
   display: "swap",
 });
 
+const SITE_URL = "https://itsayan.in"; 
+
 export const metadata = {
-  title: "Ayan Khan — Full-Stack Developer",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Ayan Khan | itsayan — Full-Stack Developer & MERN Stack Developer",
+    template: "%s | Ayan Khan (itsayan)",
+  },
   description:
-    "Full-Stack Developer | MERN Stack Developer | AI Enthusiast. Portfolio of Ayan Khan.",
+    "Ayan Khan (itsayan) — Full-Stack Developer specialising in the MERN stack, AI and real-time web applications. Explore projects, skills and get in touch.",
+  keywords: [
+    "itsayan",
+    "Ayan Khan",
+    "Ayan Khan unchahar",
+    "Ayan Khan raebareli",
+    "Ayan Khan developer",
+    "itsayan.in",
+    "MERN Stack Developer",
+    "Full-Stack Developer unchahar , raebareli , India",
+    "best website developer in unchahar",
+    "best website developer in raebareli",
+    "best website developer near me",
+    "best developer near me",
+    "full stack web developer near me",
+    "best website developer near me",
+    "best engineer near me",
+    "best software engineer near me",
+    "best software engineer in unchahar",
+    "best software engineer in raebareli",
+    "best software engineer in lucknow",
+    "best software engineer in mumbra",
+    "best software engineer in mumbai",
+    "best software engineer in dharavi",
+    "best software engineer in mahim",
+    "best software engineer in sanjay nagar",
+    "best iot engineer near me",
+    "best iot engineer in unchahar",
+    "best iot engineer in raebareli",
+  ],
+  authors: [{ name: "Ayan Khan", url: SITE_URL }],
+  creator: "Ayan Khan",
+  publisher: "Ayan Khan",
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: "Ayan Khan (itsayan) — Full-Stack Developer",
+    description:
+      "Full-Stack Developer specialising in the MERN stack, AI and real-time web applications.",
+    siteName: "itsayan",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Ayan Khan" }],
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ayan Khan (itsayan) — Full-Stack Developer",
+    description:
+      "Full-Stack Developer specialising in the MERN stack, AI and real-time web applications.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
+  verification: {
+    google: "YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -41,7 +111,30 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${display.variable} ${body.variable} ${mono.variable} ${urdu.variable}`}
     >
-      <body className="bg-bg text-ink font-body antialiased">{children}</body>
+      <body className="bg-bg text-ink font-body antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Ayan Khan",
+              alternateName: "itsayan",
+              url: "https://itsayan.in",
+              image: "https://itsayan.in/ayan-photo.jpg",
+              jobTitle: "Full-Stack Developer",
+              description:
+                "Full-Stack Developer specialising in the MERN stack, AI and real-time web applications.",
+              sameAs: [
+                "https://github.com/khantraders000",
+                "https://www.linkedin.com/in/ayan-khan-b06057354",
+                "https://www.instagram.com/ayan_khan_0313_",
+              ],
+            }),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

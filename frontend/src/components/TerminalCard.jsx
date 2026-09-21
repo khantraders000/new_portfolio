@@ -228,7 +228,7 @@ export default function TerminalCard() {
           />
 
           <span className="ml-3 font-mono text-xs text-dim">
-            itsayan.dev — zsh
+            itsayan.in — zsh
           </span>
         </div>
 

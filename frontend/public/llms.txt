@@ -1,0 +1,15 @@
+# Ayan Khan (itsayan)
+
+Full-Stack Developer specialising in the MERN stack (MongoDB, Express.js,
+React.js, Node.js), Artificial Intelligence, and real-time web applications
+(Socket.io, WebRTC).
+
+Website: https://itsayan.in
+GitHub: https://github.com/khantraders000
+LinkedIn: https://www.linkedin.com/in/ayan-khan-b06057354
+
+## Summary
+Ayan Khan is a Computer Science & Engineering student (AI specialisation)
+at Babu Banarasi Das University, Lucknow, building full-stack applications
+including EdTech platforms, real-time chat apps, task managers, and
+IoT/authentication projects.
