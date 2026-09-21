@@ -41,6 +41,7 @@ export const metadata = {
     "Ayan Khan",
     "Ayan Khan unchahar",
     "Ayan Khan raebareli",
+    "web developer unchahar",
     "Ayan Khan developer",
     "itsayan.in",
     "MERN Stack Developer",
