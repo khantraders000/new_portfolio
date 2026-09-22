@@ -17,7 +17,6 @@ export default function About() {
         <Reveal className="md:col-span-2">
           {!photoError ? (
             <div className="card p-3 aspect-[4/5] w-full max-w-xs mx-auto md:mx-0 overflow-hidden">
-              {/* Drop a file named ayan-photo.jpg into /public to replace this */}
               <img
                 src="/ayan-photo.jpg"
                 alt="Ayan Khan"
