@@ -33,7 +33,10 @@ const SITE_URL = "https://itsayan.in";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Ayan Khan | Full-Stack Developer",
+  title: {
+  default: "Ayan Khan | Full-Stack Developer",
+  template: "%s | Ayan Khan",
+  },
   description:
     "Ayan Khan is a Full-Stack Developer specializing in React, Next.js, Node.js, MongoDB and AI-powered web applications.",
   keywords: [
@@ -71,7 +74,7 @@ export const metadata = {
   creator: "Ayan Khan",
   publisher: "Ayan Khan",
   alternates: {
-    canonical: SITE_URL,
+    canonical: "/",
   },
   openGraph: {
     type: "website",
@@ -93,7 +96,7 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 ,"max-video-preview": -1},
   },
   verification: {
     google: "YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
