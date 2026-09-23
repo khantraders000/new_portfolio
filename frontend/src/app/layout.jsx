@@ -38,7 +38,7 @@ export const metadata = {
   template: "%s | Ayan Khan",
   },
   description:
-    "Ayan Khan is a Full-Stack Developer specializing in React, Next.js, Node.js, MongoDB and AI-powered web applications.",
+    "Ayan Khan is a Full-Stack Developer from Unchahar specializing in React, Next.js, Node.js, MongoDB and AI-powered web applications.",
   keywords: [
     "itsayan",
     "Ayan Khan",
