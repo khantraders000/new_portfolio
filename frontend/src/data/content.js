@@ -4,7 +4,7 @@ export const CONTACT = {
   email: "ayan180000@gmail.com",
   github: "https://github.com/khantraders000",
   linkedin: "https://www.linkedin.com/in/ayan-khan-b06057354",
-  location: "Uttar Pradesh, India",
+  location: "Unchahar,Raebareli,Uttar Pradesh, India",
 };
 
 export const roles = [
