@@ -30,7 +30,6 @@ export default function About() {
               <span className="comment">/public/ayan-photo.jpg</span>
             </div>
           )}
-          <p className="comment mt-3 text-center md:text-left">add /public/ayan-photo.jpg to replace this</p>
         </Reveal>
 
         <Reveal delay={0.1} className="md:col-span-3 space-y-5 text-[15.5px] leading-relaxed text-dim">
