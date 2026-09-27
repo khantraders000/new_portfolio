@@ -1013,9 +1013,7 @@ useEffect(() => {
               </p>
 
               <p className="mt-6 max-w-md text-sm leading-7 text-white/40">
-                Originally from Unchahar in
-                Raebareli district, Uttar Pradesh,
-                India.
+              I am originally from Unchahar, Raebareli, Uttar Pradesh, India. Unchahar is my hometown, and it is an important part of my personal background.
               </p>
 
             </div>
