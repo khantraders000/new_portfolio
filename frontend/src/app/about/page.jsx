@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 
 import { CONTACT } from "@/data/content";
+import Navbar from "@/components/Navbar";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -757,61 +758,7 @@ useEffect(() => {
       ================================================= */}
 
       <header className="mx-auto w-full max-w-7xl px-5 pt-6 md:px-8 lg:px-10">
-        <nav className="flex items-center justify-between border-b border-white/10 pb-5">
-
-          <Link
-            href="/"
-            className="text-xl font-bold tracking-tight"
-          >
-            <span className="text-white">
-              its
-            </span>
-
-            <span className="text-cyan-300">
-              ayan
-            </span>
-          </Link>
-
-          <div className="hidden items-center gap-8 text-sm text-white/60 md:flex">
-
-            <Link
-              href="/"
-              className="transition hover:text-white"
-            >
-              Home
-            </Link>
-
-            <Link
-              href="/about"
-              className="text-cyan-300"
-            >
-              About
-            </Link>
-
-            <Link
-              href="/#projects"
-              className="transition hover:text-white"
-            >
-              Projects
-            </Link>
-
-            <Link
-              href="/#contact"
-              className="transition hover:text-white"
-            >
-              Contact
-            </Link>
-
-          </div>
-
-          <Link
-            href="/#contact"
-            className="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-200 transition hover:bg-cyan-300/20"
-          >
-            Let&apos;s Talk
-          </Link>
-
-        </nav>
+        <Navbar/>
       </header>
 
       {/* =================================================

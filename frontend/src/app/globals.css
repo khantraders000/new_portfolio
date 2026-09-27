@@ -200,6 +200,13 @@ body {
 .nav-link:hover::after {
   width: 100%;
 }
+.nav-link.active {
+  color: #e9ecf3;
+}
+.nav-link.active::after {
+  width: 100%;
+  background: #6e60d8;
+}
 
 .marquee-track {
   display: flex;

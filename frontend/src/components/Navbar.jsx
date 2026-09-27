@@ -1,16 +1,54 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
+// "home" isn't a hash section on its own — it's just the top of "/".
 const LINKS = [
+  ["home", "/"],
   ["about", "/about"],
-  ["skills", "#skills"],
-  ["projects", "#projects"],
-  ["experience", "#experience"],
-  ["contact", "#contact"],
+  ["skills", "/#skills"],
+  ["projects", "/#projects"],
+  ["experience", "/#experience"],
+  ["contact", "/#contact"],
 ];
+
+// Section ids to watch for the scroll-spy (only relevant while on "/").
+const SECTION_IDS = ["home", "skills", "projects", "experience", "contact"];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState("home");
+  const pathname = usePathname();
+
+  // Highlight whichever homepage section is currently in view.
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveHash(entry.target.id);
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+
+    const els = SECTION_IDS.map((id) => document.getElementById(id)).filter(Boolean);
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  function isActive(href) {
+    if (href === "/about") return pathname === "/about";
+    if (href === "/") return pathname === "/" && activeHash === "home";
+    const hash = href.split("#")[1];
+    return pathname === "/" && activeHash === hash;
+  }
+
+  function linkClass(href) {
+    return `nav-link ${isActive(href) ? "active" : ""}`;
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -18,28 +56,28 @@ export default function Navbar() {
         className="glass mx-auto mt-3 max-w-6xl rounded-2xl px-5 py-3 flex items-center justify-between"
         style={{ paddingTop: "calc(0.75rem + env(safe-area-inset-top, 0px))" }}
       >
-        <a href="#home" className="font-display font-semibold text-lg tracking-tight flex items-center gap-2">
+        <Link href="/" className="font-display font-semibold text-lg tracking-tight flex items-center gap-2">
           <span className="w-8 h-8 rounded-lg bg-violet/15 border border-violet/30 flex items-center justify-center font-mono text-violet text-sm">
             AK
           </span>
           Ayan Khan
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8 font-mono text-[13px]">
           {LINKS.map(([label, href]) => (
-            <a key={href} href={href} className="nav-link">
+            <Link key={href} href={href} className={linkClass(href)}>
               {label}
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <a href="#resume" className="btn-ghost rounded-full px-4 py-2 text-sm">
+          <Link href="/#resume" className="btn-ghost rounded-full px-4 py-2 text-sm">
             Resume
-          </a>
-          <a href="#contact" className="btn-primary rounded-full px-4 py-2 text-sm">
+          </Link>
+          <Link href="/#contact" className="btn-primary rounded-full px-4 py-2 text-sm">
             Let&apos;s talk
-          </a>
+          </Link>
         </div>
 
         <button
@@ -62,16 +100,16 @@ export default function Navbar() {
         }`}
       >
         {LINKS.map(([label, href]) => (
-          <a key={href} href={href} className="nav-link" onClick={() => setOpen(false)}>
+          <Link key={href} href={href} className={linkClass(href)} onClick={() => setOpen(false)}>
             {label}
-          </a>
+          </Link>
         ))}
-        <a href="#resume" className="btn-ghost rounded-full px-4 py-2 text-center" onClick={() => setOpen(false)}>
+        <Link href="/#resume" className="btn-ghost rounded-full px-4 py-2 text-center" onClick={() => setOpen(false)}>
           Resume
-        </a>
-        <a href="#contact" className="btn-primary rounded-full px-4 py-2 text-center" onClick={() => setOpen(false)}>
+        </Link>
+        <Link href="/#contact" className="btn-primary rounded-full px-4 py-2 text-center" onClick={() => setOpen(false)}>
           Let&apos;s talk
-        </a>
+        </Link>
       </div>
     </header>
   );
