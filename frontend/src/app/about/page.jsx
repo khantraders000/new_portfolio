@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 const SITE_URL = "https://itsayan.in";
 
 const PAGE_TITLE =
-  "About Ayan Khan | itsayan — Full-Stack Developer";
+  "About Ayan Khan | Full-Stack Developer - Unchahar";
 
 const PAGE_DESCRIPTION =
   "Learn about Ayan Khan, a Full-Stack Developer from Unchahar, Raebareli, Uttar Pradesh, specializing in React, Next.js, Node.js, MongoDB, MERN stack, AI and modern web applications.";
