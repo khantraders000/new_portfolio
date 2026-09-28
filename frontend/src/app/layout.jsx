@@ -1,5 +1,6 @@
 import { Space_Grotesk, Inter, JetBrains_Mono, Noto_Nastaliq_Urdu } from "next/font/google";
 import "./globals.css";
+import PageToast from "@/components/PageToast";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -136,6 +137,7 @@ export default function RootLayout({ children }) {
           }}
         />
         {children}
+         <PageToast />
       </body>
     </html>
   );
