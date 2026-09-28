@@ -41,7 +41,7 @@ function PageToastContent({ name }) {
         </svg>
       </span>
       <div style={{ lineHeight: 1.25 }}>
-        <div style={{ fontSize: 11, color: "#8B93A6", letterSpacing: "0.04em" }}>you are here</div>
+        <div style={{ fontSize: 11, color: "#8B93A6", letterSpacing: "0.04em" }}>you are at </div>
         <div style={{ fontSize: 14, fontWeight: 600, color: "#E9ECF3" }}>{name}</div>
       </div>
     </div>
